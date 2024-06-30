@@ -1,0 +1,43 @@
+<div class="container">
+  <h3>Registro</h3>
+  <hr />
+  <form (submit)="agregarEmpleado()">
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <label for="numEmpleado">Número del empleado</label>
+        <input type="number" id="numEmpleado" class="form-control" placeholder="Número del empleado" name="Numero empleado" [(ngModel)]="empleado.numEmpleado" />
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" class="form-control" placeholder="Nombre" name="Nombre" [(ngModel)]="empleado.nombre" />
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="correo">Correo</label>
+        <input type="email" id="correo" class="form-control" placeholder="Correo" name="Correo" [(ngModel)]="empleado.correo" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" class="form-control" placeholder="Teléfono" name="Telefono" [(ngModel)]="empleado.telefono" />
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="fechaNacimiento">Fecha de nacimiento</label>
+        <input type="date" id="fechaNacimiento" class="form-control" placeholder="Fecha de nacimiento" name="fechaNacimiento" [(ngModel)]="empleado.fechaNacimiento" />
+      </div>
+      <div class="col-md-4 mb-3">
+        <label>Sexo</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" id="sexoHombre" name="sexo" [(ngModel)]="empleado.sexo" value="Hombre" required />
+          <label class="form-check-label" for="sexoHombre">Hombre</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" id="sexoMujer" name="sexo" [(ngModel)]="empleado.sexo" value="Mujer" required />
+          <label class="form-check-label" for="sexoMujer">Mujer</label>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-info">Agregar</button>
+  </form>
+</div>
